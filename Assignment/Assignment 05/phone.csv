@@ -1,0 +1,19 @@
+Items,Minutes
+Minutes allowed in a month (200-800):,250
+Minutes used during this month :,400
+Calculate Annual usage (y or n):,y
+Minutes used during month 01 :,380
+Minutes used during month 02 :,920
+Minutes used during month 03 :,400
+Minutes used during month 04 :,150
+Minutes used during month 05 :,480
+Minutes used during month 06 :,131
+Minutes used during month 07 :,945
+Minutes used during month 08 :,250
+Minutes used during month 09 :,228
+Minutes used during month 10 :,965
+Minutes used during month 11 :,250
+Minutes used during month 12 :,251
+,
+This file must be on the same directory as the .py file.,
+The structure must not be changed,
