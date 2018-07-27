@@ -1,0 +1,59 @@
+
+>pip install kafka-python opencv-python Flask
+
+copy consumer.py producer.py video.mp4 to any folder in your computer
+
+initialize the virtual machine bitnami-hadoop
+if ip <> 192.168.2.25
+	then get the ip address of the machine
+		update consumer.py and producer.py to the correct ip address
+
+start the producer.py in terminal, type topic name
+>python producer.py
+>v1
+
+start the consumer.py in terminal, type any topic name 
+>python consumer.py
+>v1
+
+on the producer terminal select input camera or video file (0/1)
+>1
+
+open googleChrome
+	open page 127.0.0.1:5000
+
+
+	Obs
+	
+Producer will capture video from select source, and run a back ground subtraction algorithm
+Then each frame of the video will be posted to kafka
+Consumer will get each frame and display on the browser.
+The consumer could be a spark streaming job that counts people in images from thousands of video streams.
+The producer could be made to send only frames that are different from the previous frame, to avoid still images.
+	
+	
+	
+(
+the vm is:
+	https://bitnami.com/redirect/to/165180/bitnami-kafka-1.0.0-1-linux-debian-8-x86_64.ova
+2 processors
+2048 MB Ram
+	
+and changes configs are:
+ 
+kafka/config/server.properties
+	message.max.bytes=5000000
+	replica.fetch.max.bytes=5000000
+	advertised.host.name=192.168.2.25
+
+zookerper/conf/zoo.cfg
+	#clientPortAddress=localhost
+
+$sudo ufw allow 9092
+$sudo ufw allow 2181
+
+$sudo rm -f /etc/ssh/sshd_not_to_be_run
+$sudo systemctl enable ssh
+$sudo systemctl start ssh
+
+)
