@@ -1,0 +1,18 @@
+wertyu
+wertyuiop[
+dfghjkl
+xcvbnm
+23456789
+ertyuio
+1: wertyu
+2: wertyuiop[
+3: dfghjkl
+4: xcvbnm
+5: 23456789
+6: ertyuio
+1: wertyu
+2: wertyuiop[
+3: dfghjkl
+4: xcvbnm
+5: 23456789
+6: ertyuio
